@@ -1,17 +1,114 @@
- 
+ define(function(require,exports,module){
+ function createPage(){
+    let create = require("createDiv.js");
+    create.UI();
 
-define(function(require,exports,module){
+/*第一大部分=====================================================*/
+/**
+ * 使用到导航栏的信息，引入文件,并且赋值
+ */
+        
+    let navDate = require("navDate.js");
+    /*arrNavRightImage
+    arrNavRightTitle*/
+    for(let i =0;i< 10;i++){
+        $("#slide-nav").children().eq(i).children().eq(0).html(navDate.arrNavData[i]);
+    }
+    for(let i =0;i< 10;i++){
+     $("#slide-nav").children().eq(i).children().eq(0).attr("class","iconfont icon-right");
+    }
+/**
+ * 调用我的第一个的数据
+ * 改进封装成为函数
+ * @type {[type]}
+ */ 
+let little = require("nav.js");
+/**
+ * 给所有的li
+ * 添加鼠标滑过的事件updateNavDate
+ * 
+ * @return {[type]} [description]
+ */
+for(let i =0 ;i<10;i++){
+    $("#slide-nav").children().eq(i).on("mouseover",updateNavDate);
+}
+for(let i =0 ;i<10;i++){
+    $("#slide-nav").children().eq(i).on("mouseout",none);
 
-    function createPage(){
-        let create = require("createDiv.js");
-        create.UI();
+}
+/***************************
+*/
+function none(){
+    $("#slide-nav-des").css({
+        "display":"none"
+    });
 
-        let dataProcessing = require("dataProcessing.js");
-    /**
-      * 0--明星单品 
-      * @param  {[type]} let i             [description]
-      * @return {[type]}     [description]
-    */
+
+}
+ let imgSrcArr = [navDate.arr0NavRightImage,navDate.arr1NavRightImage,navDate.arr2NavRightImage,navDate.arr3NavRightImage,navDate.arr4NavRightImage,navDate.arr5NavRightImage,navDate.arr6NavRightImage,navDate.arr7NavRightImage,navDate.arr8NavRightImage,navDate.arr9NavRightImage];
+
+let contentArr = [navDate.arr0NavRightTitle,navDate.arr1NavRightTitle,navDate.arr2NavRightTitle,navDate.arr3NavRightTitle,navDate.arr4NavRightTitle,navDate.arr5NavRightTitle,navDate.arr6NavRightTitle,navDate.arr7NavRightTitle,navDate.arr8NavRightTitle,navDate.arr9NavRightTitle];
+
+
+//通过孩子的下标来调用函数
+function updateNavDate(){
+    $("#slide-nav-des span").css({
+        "display":"none"
+    });
+   //这就是第一个孩子
+     let indexNav = -1;         
+            let liNum =  $(this).index();
+             let length = Math.ceil(contentArr[liNum].length/6);
+             let much0= contentArr[liNum].length;//17
+                 for(let i =0;i<length;i++){
+                    let left = 0;
+                    let top = 0;
+                    left = i*240 + 20;
+                    for(let j = 0 ;j<6;j++ ){
+                        indexNav++;
+                        top = j*70 +20;
+                        if(indexNav<much0){
+                            little.little({
+                                "parentDom":$("#slide-nav-des"),
+                                "imgWidth":40,
+                                "imgHeight":40,
+                                "height":340,
+                                "spanTop":top,
+                                "spanLeft":left,
+                                "imgSrc":imgSrcArr[liNum][indexNav],
+                                "content":contentArr[liNum][indexNav],
+                                "display":"block"
+                            });
+                        }else{
+                            break;
+                        }
+                
+                    }
+                }
+}
+
+   
+
+
+/**
+ * 鼠标滑过的时候，导航栏信息的显示
+ */
+
+/**
+ * 鼠标滑过导航栏信息的赋值
+ */
+/*第二大部分=================================================*/
+
+/**
+  * 使用到产品的信息数据，引入文件
+  * @type {[type]}
+  */
+        let dataProcessing = require("dataProcessing.js");  
+/**
+  * 0--明星单品 
+  * @param  {[type]} let i             [description]
+  * @return {[type]}     [description]
+*/
 
         for(let j = 0 ;j<4;j++){
            /*
@@ -19,6 +116,7 @@ define(function(require,exports,module){
                 break;
             }*/
             let $left = j*266;
+
             create.cell({
             "imgWidth":160,
             "imgHeight":160,
@@ -32,14 +130,15 @@ define(function(require,exports,module){
             "priceNow":dataProcessing.arrSingleProPriceNow[j]
                 
          });
+
         }
 
       
-    /**
-      * 1--家电 按照right进行找孩子
-      * @param  {[type]} let i             [description]
-      * @return {[type]}     [description]
-    */
+/**
+  * 1--家电 按照right进行找孩子
+  * @param  {[type]} let i             [description]
+  * @return {[type]}     [description]
+*/
 
         
         // arrHomeElecTitle.push(json.homeelec.right[0].items[1].title);
@@ -83,12 +182,12 @@ define(function(require,exports,module){
              });
      
        
-    /**
-     * 2--智能
-     * @param  {[type]} let i             [description]
-     * @return {[type]}     [description]
-     */
-         index = -1;
+/**
+ * 2--智能
+ * @param  {[type]} let i             [description]
+ * @return {[type]}     [description]
+ */
+     index = -1;
         for(let i =0;i<2;i++){
             let $top = i*315;
 
@@ -143,11 +242,11 @@ define(function(require,exports,module){
              });
     
 
-    /**
-     * 3--搭配
-     * @param  {[type]} let i             [description]
-     * @return {[type]}     [description]
-    */
+/**
+ * 3--搭配
+ * @param  {[type]} let i             [description]
+ * @return {[type]}     [description]
+*/
          index = -1;
         for(let i =0;i<2;i++){
             let $top = i*315;
@@ -201,11 +300,11 @@ define(function(require,exports,module){
              });
     
 
-    /**
-     * 4--配件
-     * @param  {[type]} let i             [description]
-     * @return {[type]}     [description]
-     */
+/**
+ * 4--配件
+ * @param  {[type]} let i             [description]
+ * @return {[type]}     [description]
+ */
           index = -1;
         for(let i =0;i<2;i++){
             let $top = i*315;
@@ -261,11 +360,11 @@ define(function(require,exports,module){
              });
     
 
-    /**
-     * 5--周边
-     * @param  {[type]} let i             [description]
-     * @return {[type]}     [description]
-     */
+/**
+ * 5--周边
+ * @param  {[type]} let i             [description]
+ * @return {[type]}     [description]
+ */
         index = -1;
         for(let i =0;i<2;i++){
             let $top = i*315;
@@ -321,11 +420,11 @@ define(function(require,exports,module){
     
 
 
-    /**
-     * 6--为你推荐 4列 问题：？？？高度的问题
-     * @param  {[type]} let j             [description]
-     * @return {[type]}     [description]
-     */
+/**
+ * 6--为你推荐 4列 问题：？？？高度的问题
+ * @param  {[type]} let j             [description]
+ * @return {[type]}     [description]
+ */
         for(let j = 0 ;j<4;j++){
                
                 let $left = j*266;
@@ -340,11 +439,11 @@ define(function(require,exports,module){
                     
              });
             }
-     /**
-     * 7--热评产品 4列 问题：？？？高度的问题
-     * @param  {[type]} let j             [description]
-     * @return {[type]}     [description]
-     */
+/**
+* 7--热评产品 4列 问题：？？？高度的问题
+* @param  {[type]} let j             [description]
+* @return {[type]}     [description]
+*/
         index = -1;
         for(let j = 0 ;j<4;j++){
                index++;
@@ -429,15 +528,11 @@ define(function(require,exports,module){
 
                     
              });
-            }
+        
+
 }
-    // let navDate = require("navDate.js");
-
-exports.createPage = createPage;
-// exports.navDate = navDate;
-
-
-
-
+  
+} 
+ exports.createPage = createPage;
 });
  

@@ -1,7 +1,7 @@
  
 
 define(function(require,exports,module){
-    
+
     function createPage(){
         let create = require("createDiv.js");
         create.UI();
@@ -43,10 +43,10 @@ define(function(require,exports,module){
 
         
         // arrHomeElecTitle.push(json.homeelec.right[0].items[1].title);
-       
+    //家电right区域  
     let index = -1;
         for(let i =0;i<2;i++){
-            let $top = i*320+20;
+            let $top = i*315;
 
             for(let j = 0 ;j<4;j++){
                let $left = j*246;
@@ -67,7 +67,20 @@ define(function(require,exports,module){
 
             }
         }
-      
+    //家电left区域
+      create.cell({
+
+                    "parentDom":$(".left").eq(0),
+                    "left":0,
+                    "top":0,
+                    "imgWidth":235,
+                    "imgHeight":615,
+                    "marginLeft":0,
+                    "imgPaddingTop":0,
+                    "infoImg":dataProcessing.arrHomeElecLeftImage
+                    
+                    
+             });
      
        
     /**
@@ -77,7 +90,7 @@ define(function(require,exports,module){
      */
          index = -1;
         for(let i =0;i<2;i++){
-            let $top = i*320+20;
+            let $top = i*315;
 
             for(let j = 0 ;j<4;j++){
                let $left = j*246;
@@ -98,7 +111,37 @@ define(function(require,exports,module){
 
             }
         }
-      
+
+    //智能left区域
+    create.cell({
+
+                    "parentDom":$(".left").eq(1),
+                    "left":0,
+                    "top":0,
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgMarginTop":0,
+                    "imgPaddingTop":0,
+
+                    "infoImg":dataProcessing.arrSmartLeftImage[0]
+                    
+                    
+            });
+     create.cell({
+
+                    "parentDom":$(".left").eq(1),
+                    "left":0,
+                    "top":315,
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgPaddingTop":0,
+                    "infoImg":dataProcessing.arrSmartLeftImage[1]
+                    
+                    
+             });
+    
 
     /**
      * 3--搭配
@@ -107,7 +150,7 @@ define(function(require,exports,module){
     */
          index = -1;
         for(let i =0;i<2;i++){
-            let $top = i*320+20;
+            let $top = i*315;
 
             for(let j = 0 ;j<4;j++){
                let $left = j*246;
@@ -128,6 +171,35 @@ define(function(require,exports,module){
 
             }
         }
+    //搭配left区域
+    create.cell({
+
+                    "parentDom":$(".left").eq(2),
+                    "left":0,
+                    "top":0,
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgMarginTop":0,
+                    "imgPaddingTop":0,
+                    "infoImg":dataProcessing.arrMatchLeftImage[0]
+                    
+                    
+            });
+     create.cell({
+
+                    "parentDom":$(".left").eq(2),
+                    "left":0,
+                    "top":315,
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgPaddingTop":0,
+                    "infoImg":dataProcessing.arrMatchLeftImage[1]
+                    
+                    
+             });
+    
 
     /**
      * 4--配件
@@ -136,7 +208,7 @@ define(function(require,exports,module){
      */
           index = -1;
         for(let i =0;i<2;i++){
-            let $top = i*320+20;
+            let $top = i*315;
 
             for(let j = 0 ;j<4;j++){
                let $left = j*246;
@@ -157,7 +229,37 @@ define(function(require,exports,module){
 
             }
         }
+     //配件left区域
+    create.cell({
 
+                    "parentDom":$(".left").eq(3),
+                    "left":0,
+                    "top":0,
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgMarginTop":0,
+                    "imgPaddingTop":0,
+
+                    "infoImg":dataProcessing.arrAccessoriesLeftImage[0]
+                    
+                    
+            });
+     create.cell({
+
+                    "parentDom":$(".left").eq(3),
+                    "left":0,
+                    "top":315,
+                    
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgPaddingTop":0,
+                    "infoImg":dataProcessing.arrAccessoriesLeftImage[1]
+                    
+                    
+             });
+    
 
     /**
      * 5--周边
@@ -166,7 +268,7 @@ define(function(require,exports,module){
      */
         index = -1;
         for(let i =0;i<2;i++){
-            let $top = i*320+20;
+            let $top = i*315;
 
             for(let j = 0 ;j<4;j++){
                let $left = j*246;
@@ -187,6 +289,36 @@ define(function(require,exports,module){
 
             }
         }
+    //周边left区域
+    create.cell({
+
+                    "parentDom":$(".left").eq(4),
+                    "left":0,
+                    "top":0,
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgMarginTop":0,
+                    "imgPaddingTop":0,
+                    "imgMarginBottom":20,
+                    "infoImg":dataProcessing.arrAroundLeftImage[0]
+                    
+                    
+            });
+   create.cell({
+
+                    "parentDom":$(".left").eq(4),
+                    "left":0,
+                    "top":315,
+                    "imgWidth":234,
+                    "imgHeight":300,
+                    "marginLeft":0,
+                    "imgPaddingTop":0,
+                    "infoImg":dataProcessing.arrAroundLeftImage[1]
+                    
+                    
+             });
+    
 
 
     /**
@@ -299,8 +431,10 @@ define(function(require,exports,module){
              });
             }
 }
-    
+    // let navDate = require("navDate.js");
+
 exports.createPage = createPage;
+// exports.navDate = navDate;
 
 
 

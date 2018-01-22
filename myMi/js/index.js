@@ -1,6 +1,11 @@
 
 seajs.use("createPage",function(create){
-	create.createPage();    
+	create.createPage(); 
+
+	
+    
+   
+
 });
 
 

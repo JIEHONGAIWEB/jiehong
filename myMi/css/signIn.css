@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**
+ * 小米商城的注册的页面样式设置
+ */
+html, body, tb, tr, tl, h1, h2, h3, h4, h5, h6, dd, dr, dl, input, img, label {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  text-align: center; }
+
+body {
+  background: #f9f9f9;
+  font-size: 14px; }
+
+#content {
+  height: 521px;
+  width: 786px;
+  background: #fff;
+  margin: 97px auto 0; }
+
+#logo {
+  text-align: center; }
+  #logo img {
+    width: 48px;
+    height: 49px; }
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  font-weight: 350;
+  color: #363b3e; }
+
+.info {
+  width: 335px;
+  margin: 0 auto; }
+  .info :nth-child(2), .info :nth-child(5) {
+    color: #333;
+    margin: 10px 0; }
+  .info :nth-child(3), .info :nth-child(6) {
+    margin: 10px 0 8px 0px; }
+    .info :nth-child(3) input, .info :nth-child(6) input {
+      width: 335px;
+      height: 40px; }
+  .info :nth-child(4) {
+    color: #666467;
+    margin-bottom: 10px; }
+  .info :nth-child(7) {
+    margin-top: 20px;
+    width: 335px;
+    height: 40px;
+    color: white;
+    background: #ff6700;
+    border-style: none; }
+  .info :nth-child(8) {
+    color: #a4a7a0; }
+    .info :nth-child(8) a {
+      color: #323836; }
+
+ul {
+  width: 80% px;
+  overflow: hidden;
+  margin: 88px auto 0px; }
+  ul li {
+    float: left;
+    padding: 0 10px; }
+
+p {
+  clear: both; }

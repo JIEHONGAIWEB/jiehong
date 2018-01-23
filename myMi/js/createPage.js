@@ -60,6 +60,7 @@ function updateNavDate(){
             let liNum =  $(this).index();
              let length = Math.ceil(contentArr[liNum].length/6);
              let much0= contentArr[liNum].length;//17
+             
                  for(let i =0;i<length;i++){
                     let left = 0;
                     let top = 0;

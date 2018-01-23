@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/**
+ * 小米商城的首页
+ */
+html, body, tb, tr, tl, h1, h2, h3, h4, h5, h6, dd, dr, dl, input, img, label {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  text-align: center; }
+
+body {
+  background: #fff; }
+
+.site-topbar {
+  height: 40px;
+  background: #333;
+  font-size: 12px;
+  line-height: 40px; }
+  .site-topbar a {
+    color: #b0b0b0; }
+  .site-topbar span {
+    color: #424242;
+    vertical-align: middle;
+    margin: 0 10px; }
+  .site-topbar .container {
+    margin: 0 auto;
+    width: 1226px; }
+    .site-topbar .container a:hover {
+      color: white; }
+    .site-topbar .container .topbar-nav {
+      height: 40px;
+      width: auto;
+      float: left; }
+    .site-topbar .container .topbar-char {
+      margin-left: 25px;
+      float: right;
+      height: 40px;
+      width: 120px;
+      background: #ff6700;
+      color: #fff;
+      text-align: center;
+      line-height: 40px; }
+      .site-topbar .container .topbar-char i {
+        font-size: 20px; }
+      .site-topbar .container .topbar-char span {
+        color: #fff;
+        display: inline; }
+    .site-topbar .container .topbar-info {
+      float: right;
+      height: 40px;
+      width: auto; }
+
+#allProducts div span {
+  border-top: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+  text-align: center;
+  padding-top: 26px; }
+
+#allProducts div a {
+  display: block;
+  margin-top: 30px;
+  color: #7d7479;
+  font-size: 12px; }

@@ -3,6 +3,9 @@ define(function(require,exports,module){
 
 
  function createAll(){
+/**
+ * 顶部信息的数据读取
+ */
 
  		let arrTopBar = ["小米商城","MIUI","loT","云服务","水滴","金融","有品","Select Region"];
 		let arrTopBarHref = ["https://www.mi.com/index.html","http://www.miui.com/","https://iot.mi.com/index.html","https://i.mi.com/","https://shuidi.mi.com/","https://jr.mi.com/?from=micom","https://youpin.mi.com/","https://www.mi.com/index.html#J_modal-globalSites"];
@@ -47,40 +50,98 @@ define(function(require,exports,module){
 /**
  * 首先先建立每一块区域的标题
  */
-
-
-let $header = null;
-let $area = null;
- 	for(let i = 0 ; i < 10 ;i++ ){
- 		 $header= $("<header><a></a></header>");
- 		 $area = $("<div></div>");
-			$("#allProducts").append($header);
-			$("#allProducts").append($area);
-	
-		
-		$("#allProducts").children().eq(2*i).css({
-			"padding-left":60
-		});	
-		
-/**
- * 为每一个区域进行赋值
- * @type {Array}
- */
-//新建我的小盒子
+//新建我的小盒子，需要进入类
 let little =  require('../nav.js');
-//NAV数据的请求获取
+
+//nav 数据的请求获取
 let navDate =  require('../navDate.js');
+
 //数据图片的存储
 let imgSrcArr = [navDate.arr0NavRightImage,navDate.arr1NavRightImage,navDate.arr2NavRightImage,navDate.arr3NavRightImage,navDate.arr4NavRightImage,navDate.arr5NavRightImage,navDate.arr6NavRightImage,navDate.arr7NavRightImage,navDate.arr8NavRightImage,navDate.arr9NavRightImage];
+
 //数据内容的存储
 let contentArr = [navDate.arr0NavRightTitle,navDate.arr1NavRightTitle,navDate.arr2NavRightTitle,navDate.arr3NavRightTitle,navDate.arr4NavRightTitle,navDate.arr5NavRightTitle,navDate.arr6NavRightTitle,navDate.arr7NavRightTitle,navDate.arr8NavRightTitle,navDate.arr9NavRightTitle];
 
-		//这就是第一个孩子
-     let indexNav = -1;         
-           
+
+
+		let $header = null;
+		let $area = null;
+/**
+ * 动态的增加了每一个标题需要的header区域
+ * 并且给每一个标题区域进行赋值并且进行样式的设置
+ */
+		for(let i =0 ;i<10;i++){
+			$header= $("<header><a></a></header>");
+			$area = $("<div></div>");
+			$("#allProducts").append($header);
+			$("#allProducts").append($area);
+			$("#allProducts").children().eq(2*i).children().eq(0).html(navDate.arrNavData[i]);
+    		$("#allProducts").children().eq(2*i).children().eq(0).css({
+				"height":40,
+				"font-size":18,
+				"display":"inline-block",
+				"padding-top":33,
+				"color":"#ff6700"
+			});	
+			$("#allProducts").children().eq(2*i).css({
+				"padding-left":60
+			});
+			$("#allProducts").children().eq(2*i+1).css({
+				"height":808,
+				"width":1226,
+				"margin":"0 auto",
+				"position":"relative"
+			});	
+				
+		}
+        
+		
+/**
+ * 为每一个标题区域的下边进行赋值
+ * 获取到数据并且进行赋值
+ */
+
+		//-*****************************
+
+		//利用div标签的每一个的索引进行新建对象和赋值     
+          
               // let divLength = imgSrcArr[0].length;
               // 1,3,5,7,9,
-             console.log($("#allProducts").children().index());
+              let indexNav = -1;
+              let lengthAll = imgSrcArr.length;//10
+              for(let i = 0;i<lengthAll;i++){
+              		
+	           		let $parent = $("#allProducts").children().eq(2*i+1);//1
+
+	           		let length = imgSrcArr[i].length;//17
+
+	           		
+	           		  
+	              	for(let j=0;j<length;j++){ //17
+					
+					 let left = j%5*245; 
+	            	 
+	                 let top = parseInt(j/5)*163;
+	                 
+		                 	
+	                            little.little({
+	                                "parentDom":$parent,
+	                                "imgWidth":60,
+	                                "imgHeight":65,
+	                                "height":137,
+	                                "width":245,
+	                                "spanTop":top,
+	                                "spanLeft":left,
+	                                "imgSrc":imgSrcArr[i][j],
+	                                "content":contentArr[i][j],
+	                                "display":"block"
+	                               
+	                            });
+		                 
+	                  	
+	              }		
+              }
+              
                  
                 /*for(let i =0;i<10;i++){
                  	$("#allProducts").children().eq(2*i+1).index();//1
@@ -115,30 +176,22 @@ let contentArr = [navDate.arr0NavRightTitle,navDate.arr1NavRightTitle,navDate.ar
                 }*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 		//-*****************************
 
-        $("#allProducts").children().eq(i).children().eq(0).html(navDate.arrNavData[i]);
-    	$("#allProducts").children().eq(i).children().eq(0).css({
-				"height":40,
-				"font-size":18,
-				"display":"inline-block",
-				"padding-top":33,
-				"color":"#ff6700"
-			});
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 

@@ -16,7 +16,10 @@ define(function(reqiure,exports,module){
 			 * 进行改进定义默认值
 			 */
 			this.myDom = null;
+			this.width =obj.width;
+			this.height = obj.height;
 			this.parentDom = obj.parentDom;
+			
 			//图片的宽高
 			this.imgWidth = obj.imgWidth;
 			this.imgHeight = obj.imgHeight;
@@ -41,14 +44,16 @@ define(function(reqiure,exports,module){
 littleProductorDisplay.prototype.createUI=function(){
 	this.parentDom.css("display","block");
 			this.myDom = $("<span></span>");
-			$("#slide-nav-des").append(this.myDom);
+			this.parentDom.append(this.myDom);
 			this.myDom.append("<img/>").append("<a></a>");
 			//span本身的样式设置
 			this.myDom.css({
 				"position":"absolute",
 				"top":this.spanTop,
 				"left":this.spanLeft,
-				"display":this.display
+				"display":this.display,
+				"width":this.width,
+				"height":this.height
 			});	
 			this.myDom.children().eq(0).css({
 				"width":this.imgWidth,

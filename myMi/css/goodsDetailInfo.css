@@ -1,0 +1,115 @@
+@charset "UTF-8";
+html, body, p, tb, tr, tl, h1, h2, h3, h4, h5, h6, dd, dr, dl, input, img, label {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  text-align: center; }
+
+body {
+  background: #fff; }
+
+.site-topbar {
+  height: 40px;
+  background: #333;
+  font-size: 12px;
+  line-height: 40px; }
+  .site-topbar a {
+    color: #b0b0b0; }
+  .site-topbar span {
+    color: #424242;
+    vertical-align: middle;
+    margin: 0 10px; }
+  .site-topbar .container {
+    margin: 0 auto;
+    width: 1226px; }
+    .site-topbar .container a:hover {
+      color: white; }
+    .site-topbar .container .topbar-nav {
+      height: 40px;
+      width: auto;
+      float: left; }
+    .site-topbar .container .topbar-char {
+      margin-left: 25px;
+      float: right;
+      height: 40px;
+      width: 120px;
+      background: #ff6700;
+      color: #fff;
+      text-align: center;
+      line-height: 40px; }
+      .site-topbar .container .topbar-char i {
+        font-size: 20px; }
+      .site-topbar .container .topbar-char span {
+        color: #fff;
+        display: inline; }
+    .site-topbar .container .topbar-info {
+      float: right;
+      height: 40px;
+      width: auto; }
+
+/**
+ * 网站头部的信息
+ */
+.home {
+  width: 100%;
+  background: #f5f5f5; }
+  .home .site-header {
+    margin: 0 auto;
+    width: 1226px;
+    height: 100px;
+    background: url("../img/logo-footer.png") no-repeat 15px;
+    position: relative; }
+    .home .site-header .header-nav {
+      position: absolute;
+      width: 850px;
+      height: 100px;
+      left: 240px; }
+      .home .site-header .header-nav a {
+        line-height: 100px;
+        margin-right: 20px;
+        color: #332e35;
+        font-size: 16px; }
+      .home .site-header .header-nav a:hover {
+        color: #ff6700; }
+    .home .site-header .header-search {
+      line-height: 100px; }
+
+/*产品的简介 bar*/
+#infoBar {
+  height: 63px;
+  box-shadow: 0 7px  5px #f5f5f5; }
+  #infoBar #bar_left {
+    float: left; }
+    #infoBar #bar_left h5 {
+      display: inline;
+      line-height: 63px; }
+    #infoBar #bar_left p {
+      display: inline;
+      line-height: 63px; }
+  #infoBar #bar_right {
+    float: right; }
+    #infoBar #bar_right li {
+      float: left; }
+
+/*产品的轮播图区域*/
+.slide_show {
+  width: 727px; }
+
+/*产品的右边的部分显示*/
+.productDetail {
+  width: 610px;
+  float: right;
+  right: 108px; }
+  .productDetail p {
+    display: inline;
+    line-height: 63px; }

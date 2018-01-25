@@ -87,7 +87,7 @@ body {
 /*产品的简介 bar*/
 #infoBar {
   height: 63px;
-  box-shadow: 0 7px  5px #f5f5f5; }
+  box-shadow: 0 7px  5px #dfdfdf; }
   #infoBar #bar_left {
     float: left; }
     #infoBar #bar_left h5 {
@@ -103,13 +103,106 @@ body {
 
 /*产品的轮播图区域*/
 .slide_show {
-  width: 727px; }
+  width: 687px; }
 
 /*产品的右边的部分显示*/
 .productDetail {
   width: 610px;
+  height: 663;
+  overflow: auto;
   float: right;
-  right: 108px; }
-  .productDetail p {
-    display: inline;
-    line-height: 63px; }
+  margin-right: 108px; }
+  .productDetail h6 {
+    font-size: 24px;
+    color: #212121;
+    font-weight: 400;
+    margin-top: 35px; }
+  .productDetail p:nth-child(2) {
+    padding: 10px 0;
+    display: inline; }
+    .productDetail p:nth-child(2) span:first-child {
+      color: #FF4A00;
+      font-size: 14px; }
+    .productDetail p:nth-child(2) span:nth-child(2) {
+      color: #B0B0B0;
+      font-size: 14px; }
+  .productDetail p:nth-child(3) {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ff6700; }
+  .productDetail div:nth-child(4) {
+    height: 40px;
+    padding-top: 10px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf; }
+    .productDetail div:nth-child(4) span:first-child {
+      display: block;
+      width: 82px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      background: #FF6700;
+      color: #f8fff6; }
+  .productDetail .address {
+    height: 100px;
+    margin: 40px;
+    background: #fafafa;
+    line-height: 100px; }
+  .productDetail div:nth-child(7) {
+    width: 297px;
+    height: 43px;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    text-align: center;
+    line-height: 43px;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .productDetail div:nth-child(9) {
+    width: 297px;
+    height: 43px;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    text-align: center;
+    line-height: 43px;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .productDetail div:nth-child(11) {
+    width: 603px;
+    height: 118px;
+    border: 1px solid #dfdfdf;
+    color: #1f342f;
+    text-align: center;
+    line-height: 118px;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .productDetail div:nth-child(13) {
+    width: 603px;
+    height: 118px;
+    border: 1px solid #dfdfdf;
+    color: #1f342f;
+    text-align: center;
+    line-height: 118px;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .productDetail #countMoney {
+    font-size: 24px;
+    color: #ff6700;
+    width: 603px;
+    height: 118px;
+    border: 1px solid #dfdfdf;
+    text-align: center;
+    line-height: 118px;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .productDetail #addCart {
+    width: 300px;
+    height: 54px;
+    background: #ff6700;
+    color: white;
+    line-height: 54px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 16px; }
+  .productDetail span:nth-child(16) {
+    color: #afadb8; }

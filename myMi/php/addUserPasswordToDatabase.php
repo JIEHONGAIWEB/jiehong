@@ -2,17 +2,16 @@
 
     header("content-type","text/html;charset=utf-8");
   // 一：接收前端数据
-  $number = $_POST["phoneNumber"];
+  $username = $_POST["username"];
   $pwd= $_POST["password"];
 
-  //二：进行处理
   
   //1、连接数据库，选择数据库（目的地）
     $mysqli = new mysqli("localhost", "root", "", "xiaomi");  
   //2.数据库的操作
      $mysqli->set_charset("utf8");
      //
-    $sql = "update mivip set password = '".$pwd."'where number='".$number."';
+    $sql = "insert into  mivip (number,password)  values('".$username."','".$pwd."')";
     //执行操作  
     $result = $mysqli->query($sql,1);  
     if($result){

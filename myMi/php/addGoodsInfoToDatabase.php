@@ -6,6 +6,7 @@
   $name = $_GET["name"];
   $price = $_GET["price"];
   $number = $_GET["number"];
+  $imgUrl = $GET["imgUrl  "];
   //二：进行处理
   //1、连接数据库，选择数据库（目的地）
     $mysqli = new mysqli("localhost", "root", "", "xiaomi");  

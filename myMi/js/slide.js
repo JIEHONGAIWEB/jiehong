@@ -27,6 +27,7 @@ class slideShow {
 	constructor(obj){
 		
 		this.objDom = obj.objDom;
+
 		this.width = obj.width;
 		this.height = obj.height;
 		this.bgColor = obj.bgColor;
@@ -34,8 +35,8 @@ class slideShow {
 		//传进来的图片数组
 		//？？后期需要修改，数据的获取需要从后边的数据库中进行获取
 		this.arrImg = obj.arrImg;
+
 		this.myTimer = null;
-		this.index = -1;
 		//创建的两个节点：1、轮播图图片展示的区域 2、底部小豆豆
 		
 		this.myDom = null;
@@ -83,10 +84,10 @@ slideShow.prototype.createUI = function(obj){
     	this[key] = defaultStyle[key];
     }
 	  /*添加节点.*/
-	  $(this.objDom).append("<img>");
+	  this.myDom = $("<img />");
+	  $(this.objDom).append(this.myDom);
 
-	  /*全局变量 $myDom 新创建的节点放置图片的区域 */
-	  let $myDom = null;
+	  
 	  /*全局变量 index 在for循环中进行存储下标*/
 	  let index =-1;
 	  /*全局变量 $spanDom 创建的新的豆豆的节点*/
@@ -94,14 +95,15 @@ slideShow.prototype.createUI = function(obj){
 
       for(let i=0;i< this.arrImg.length;i++){
       	index=i;
-      	$myDom = $(this.objDom).children().append("<span>");
-	    $spanDom = $myDom.children(i);
-	      	$($spanDom).css({
+      	$spanDom = $("<span></span>");
+      	this.objDom.append($spanDom);
+	  
+	      	$spanDom.css({
 	      				/*动态的修改豆豆之间的距离*/
 				"right":function (){return index+=30}
 			});
       }
-      this.myDom = $myDom;
+      
 
       /*设置了 轮播图区域图片展示的样式*/
       $(this.myDom).css({
@@ -113,7 +115,7 @@ slideShow.prototype.createUI = function(obj){
 		});
 
       /*设置了 小豆豆的样式*/
-      $($spanDom).css({
+      $spanDom.css({
 			"position":"absolute",
 			"bottom":10,
 			"margin":10,
@@ -123,6 +125,7 @@ slideShow.prototype.createUI = function(obj){
 			"border-radius":"50%"
 		});
 }
+
 slideShow.prototype.autoPlay = function(){
 	/**
 	*图片实现自动播放
@@ -136,9 +139,9 @@ slideShow.prototype.autoPlay = function(){
 			$(this.myDom)[0].src = this.arrImg[this.index];
 
 			
-    $img.eq(outOrd).animate({"opacity":0},2000);
+      
 
-			$(this.myDom).prev().fadeOut(100);
+			$(this.myDom).prev().fadeOut(100).animate({"opacity":0},2000);
 			$(this.myDom).fadeIn(100);
 		}else{
 			this.index = -1;

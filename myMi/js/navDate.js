@@ -134,29 +134,7 @@ var arrNavData =[];
                 arr9NavRightTitle.push(json[9].right[j].title);
                 arr9NavRightImage.push(json[9].right[j].img);
         }
-    
-
-
-
-
-
-
-
-
     }
-
-
-
-    console.log(arrNavData);
-    console.log(arr0NavRightImage);
-
-    console.log(arr0NavRightTitle);
-
-
-
-
-
-
 
      exports.arrNavData  = arrNavData;
 

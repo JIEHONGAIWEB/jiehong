@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/**
+ * 小米商城的登录的页面样式设置
+ */
+html, body, p, tb, tr, tl, h1, h2, h3, h4, h5, h6, dd, dr, dl, input, img, label {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  text-align: center; }
+
+/*顶部的内容信息*/
+header {
+  height: 96px; }
+  header #logo {
+    position: relative; }
+    header #logo img:first-child {
+      width: 50px;
+      height: 50px;
+      margin-left: 112px;
+      display: inline-block;
+      margin-top: 25px; }
+    header #logo h3 {
+      position: absolute;
+      top: -10px;
+      left: 180px;
+      font-weight: 400; }
+      header #logo h3 :first-child {
+        text-align: left;
+        color: #373737;
+        padding-top: 25px;
+        font-size: 30px; }
+      header #logo h3 span {
+        text-align: left;
+        display: block;
+        font-size: 12px; }
+
+/*中间的内容部分*/
+#content {
+  clear: both;
+  width: 100%;
+  height: 570px;
+  background-image: url("http://i8.mifile.cn/b2c-mimall-media/634d319874c4778ed0674f8339834f9d.jpg");
+  background-position: center center; }
+
+#log {
+  width: 356px;
+  height: 468px;
+  background: #fff;
+  float: right;
+  margin: 20px 90px;
+  padding: 30px; }
+  #log span:nth-child(2), #log span:nth-child(1) {
+    line-height: 90px;
+    width: 175px;
+    font-size: 24px;
+    color: #F56600; }
+  #log #data button {
+    width: 347px;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background: #ff6700;
+    color: white;
+    border: none; }
+  #log #data input {
+    display: block;
+    width: 332px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    padding-left: 15px; }
+  #log #data input:nth-child(1) {
+    margin-bottom: 10px; }
+  #log #data input:nth-child(2) {
+    margin-bottom: 25px; }
+
+/*底部的信息*/
+ul {
+  overflow: hidden;
+  width: 786px;
+  height: 20px;
+  margin: 88px auto 0px;
+  padding-left: 333px;
+  margin-bottom: 15px; }
+  ul li {
+    text-align: center;
+    width: 50px;
+    border-right: 1px solid #eac29f;
+    border-left: 1px solid #9bb7dc;
+    color: #777569;
+    float: left;
+    padding: 0 10px; }
+  ul li:first-child {
+    color: #3a3522;
+    border-left-style: none; }
+  ul li:last-child {
+    width: 70px;
+    border-right-style: none; }
+
+p {
+  clear: both;
+  text-align: center;
+  color: #9f9c97; }

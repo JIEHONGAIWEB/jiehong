@@ -1,0 +1,85 @@
+@charset "UTF-8";
+html, body, p, tb, tr, tl, h1, h2, h3, h4, h5, h6, dd, dr, dl, input, img, label {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  text-align: center; }
+
+html, body, p, ul, li, td, tt, tr, h3, span, header {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #f5f5f5; }
+
+header {
+  position: relative;
+  height: 100px;
+  border-bottom: 2px solid #ff6700; }
+  header img {
+    width: 48px;
+    height: 48px;
+    margin-top: 26px;
+    margin-left: 105px;
+    margin-right: 46px; }
+  header h3 {
+    display: inline-block;
+    color: #424242;
+    font-size: 28px;
+    position: absolute;
+    top: 36px;
+    font-weight: 400; }
+  header span {
+    display: inline-block;
+    position: absolute;
+    left: 355px;
+    margin-top: 50px;
+    color: #727272;
+    font-size: 12px; }
+  header #logIn {
+    position: absolute;
+    right: 113px;
+    color: #757575;
+    font-size: 12px;
+    top: 44px; }
+
+/*购物车标题区域*/
+#cart #goodsName {
+  height: 43px;
+  width: 1226px;
+  background: white;
+  margin: 33px auto 0px;
+  padding-top: 28px; }
+  #cart #goodsName input[type="checkbox"] {
+    display: inline-block;
+    margin-left: 24px;
+    width: 21px;
+    height: 21px;
+    background: #ff6700;
+    border: none; }
+  #cart #goodsName span:nth-child(2) {
+    margin-left: 20px; }
+  #cart #goodsName span:nth-child(3) {
+    margin-left: 70px; }
+  #cart #goodsName span:nth-child(4) {
+    margin-left: 374px;
+    margin-right: 70px; }
+  #cart #goodsName span:nth-child(4) {
+    margin-right: 145px; }
+  #cart #goodsName,
+  #cart #goodsName span:nth-child(5) {
+    margin-right: 155px; }
+  #cart #goodsName span:nth-child(6) {
+    margin-right: 110px; }
+  #cart #goodsName span:nth-child(7) {
+    margin-right: 53px; }

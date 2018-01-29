@@ -1,0 +1,100 @@
+@charset "UTF-8";
+html, body, p, tb, tr, tl, h1, h2, h3, h4, h5, h6, dd, dr, dl, input, img, label {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  text-align: center; }
+
+body {
+  background: pink; }
+
+ul {
+  border-style: solid;
+  color: blue; }
+  ul li {
+    list-style: none;
+    color: red; }
+
+div {
+  background: #f1f1f1; }
+
+#box1 {
+  font-size: 16px; }
+
+.title {
+  border-bottom: 1px solid red; }
+
+a {
+  text-align: center; }
+  a:hover {
+    color: red; }
+
+li {
+  border-style: solid;
+  border-left-color: red;
+  border-right-color: blue; }
+
+.box2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red; }
+
+.box3 {
+  opacity: 0.9;
+  font-size: 30px;
+  color: green; }
+
+.box4, .box5 {
+  opacity: 0.4;
+  font-size: 30px;
+  color: green; }
+
+.box5 {
+  color: red; }
+
+/*!
+ *这块的代码会编译成为css文件的 注释
+ 专门用来被其他的.scss文件进行引用
+ */
+.classBox {
+  background: black;
+  opacity: 0.5; }
+
+.classBox2 {
+  background: red; }
+
+.classBox3 {
+  color: yellow; }
+  .classBox3 li :nth-child(1) {
+    left: 50px; }
+  .classBox3 li :nth-child(2) {
+    left: 100px; }
+  .classBox3 li :nth-child(3) {
+    left: 150px; }
+  .classBox3 li :nth-child(4) {
+    left: 200px; }
+  .classBox3 li :nth-child(5) {
+    left: 250px; }
+  .classBox3 li :nth-child(6) {
+    left: 300px; }
+  .classBox3 li :nth-child(7) {
+    left: 350px; }
+  .classBox3 li :nth-child(8) {
+    left: 400px; }
+  .classBox3 li :nth-child(9) {
+    left: 450px; }
+  .classBox3 li :nth-child(10) {
+    left: 500px; }
+  .classBox3 li :nth-child(11) {
+    left: 550px; }
